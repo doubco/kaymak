@@ -1,0 +1,435 @@
+doctype html
+html(lang='en')
+	head
+		//- meta
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='description', content='Kaymak.js')
+		meta(name='keywords', content='slider,jquery,coffee,hammerjs')
+
+		//- mobile config
+		meta(name='viewport', content='width=device-width,height=device-height, initial-scale=1, maximum-scale=1,minimal-ui')
+		meta(name='msapplication-tap-highlight', content='no')
+
+		//- css
+		link(href='demo.css', rel='stylesheet')
+		link(href='kay.css', rel='stylesheet')
+
+
+		script(src='bower_components/jquery/dist/jquery.min.js')
+		script(src='bower_components/jquery-hammerjs/jquery.hammer-full.min.js')
+		script(src='bower_components/jquery.transit/jquery.transit.js')
+		script(src='kay.js')
+
+		title Kaymak.js
+
+	body
+		.wrapper
+			.separator
+
+			.title.clearfix
+				span Kaymak
+				span.tiny .js
+				.doub-logo.icon-logo
+			
+			.separator
+
+			.description.clearfix
+				span Kaymak.js is a lightweight, flexible and multi-device content/image slider.
+				br
+				span It's only 4kb gziped.
+				br
+				.devices
+					span.icon-devices
+				br
+				span Plugin dependencies are jQuery, Hammer.js and optionally Transit.js (for css3 transitions)
+				br
+				span Feel free to fork on #[a(href="https://github.com/doubco/kaymak") Github] #[span.inline-icon.icon-github]
+				br
+				br
+				span You can find demos and snippets on this page. If you want to now more open the source code.
+				br
+				span It's completely free.
+
+			.separator
+	
+			.sub-title.clearfix
+				span Browser support
+
+			.description.clearfix
+				span Safari, Chorme and Firefox
+				br
+				span also with little glitch works on IE9 and IE10 both desktop and mobile.
+
+			.separator
+
+			.sub-title.clearfix
+				span Liquid
+				span.tiny Mode
+
+
+			.description.clearfix
+				span With this mode you can show your contents which has different sizes.
+				.separator
+				span #[b code]
+				.clear
+				.code
+					code='<div class="kay" id="liquid-demo" data-duration="5000" data-liquid="1" data-loop="1">'
+					br
+					code='	<div class="k-block" class="b1">'
+					br
+					code= '		hi'
+					br
+					code= '	</div>'
+					br
+					code= '	...'
+					br
+					code= '</div>'
+				
+		.separator
+
+		#liquid-demo.kay(data-duration="5000" data-liquid="1" data-loop="1")
+			.k-block.b1
+				| hi
+			.k-block.b2
+				| human
+			.k-block.b3
+				| you
+			.k-block.b4
+				| can
+			.k-block.b5
+				| make
+			.k-block.b6
+				| me
+			.k-block.b7
+				| slide
+			.k-block.b8
+				| forever
+			.k-block.b9
+				| and
+			.k-block.b10
+				| ever
+			.k-block.b11
+				| and
+			.k-block.b12
+				| ever
+
+		.separator
+		.separator
+
+		.wrapper
+			.sub-title.clearfix
+				span Fixed
+				span.tiny Mode
+
+
+			.description.clearfix
+				span With this mode you can show your contents which has fixed size.
+				.separator
+				span #[b code]
+				.clear
+				.code
+					code='<div class="kay" id="fixed-demo" data-duration="5000">'
+					br
+					code='	<div class="k-block" class="b1">'
+					br
+					code= '		hi'
+					br
+					code= '	</div>'
+					br
+					code= '	...'
+					br
+					code= '</div>'
+
+			.separator
+
+			#fixed-demo.kay(data-duration="5000")
+				.k-block.b1
+					| hi
+				.k-block.b2
+					| again
+				.k-block.b3
+					| we
+				.k-block.b4
+					| are
+				.k-block.b5
+					| lovely
+				.k-block.b6
+					| boxes
+				.k-block.b7
+					| you
+				.k-block.b8
+					| can
+				.k-block.b9
+					| be
+				.k-block.b10
+					| our
+				.k-block.b11
+					| super
+				.k-block.b12
+					| hero
+
+			.separator
+			.separator
+
+			.sub-title.clearfix
+				span Full
+				span.tiny Mode
+
+
+			.description.clearfix
+				span With this mode you can show your contents page based navigation.Can fit to parent or window.
+				.separator
+				span #[b code]
+				.clear
+				.code
+					code='<div class="kay" id="full-demo" data-full="1" data-loop="1" data-fixed="1" data-fixed-width="parent" data-fixed-height="500" data-duration="3000">'
+					br
+					code= '	...'
+					br
+					code='	<div class="k-block" class="b3">'
+					br
+					code= '		love'
+					br
+					code= '	</div>'
+					br
+					code= '	...'
+					br
+					code= '</div>'
+
+			.separator
+
+			#full-demo.kay(data-loop="1" data-full="1" data-fixed="1" data-fixed-width="parent" data-fixed-height="500" data-duration="3000")
+				.k-block.b1
+					| I
+				.k-block.b2
+					| can't
+				.k-block.b3
+					| love
+				.k-block.b4
+					| you
+				.k-block.b5
+					| enough
+
+			.separator
+			.separator
+
+			.sub-title.clearfix
+				span Full Page
+				span.tiny Mode
+
+
+			.description.clearfix
+				span With this mode you can show your contents/images page based navigation.
+				.separator
+				span #[b code]
+				.clear
+				.code
+					code='<div class="kay" id="fullpage-demo" data-full="1" data-loop="1" data-fixed="1" data-fixed-width="full" data-fixed-height="full" data-duration="3000">'
+					br
+					code='	<div class="k-block" data-thumbnail="http://lorempixel.com/256/144/abstract/1">'
+					br
+					code='		<div class="k-image">'
+					br
+					code='			<img src="http://lorempixel.com/1280/720/abstract/1" data-width="1280" data-height="720"/>'
+					br
+					code= '		</div>'
+					br
+					code= '	</div>'
+					br
+					code= '	...'
+					br
+					code= '</div>'
+
+			.separator
+
+
+		#fullpage-demo.kay(data-full="1" data-loop="1" data-fixed="1" data-fixed-width="full" data-fixed-height="full" data-duration="3000" data-navigatortype="thumbnail" data-navigator="#fullpage-demo-navigator" data-next="#fullpage-demo-next" data-prev="#fullpage-demo-prev")
+			.k-block(data-thumbnail="http://lorempixel.com/128/72/abstract/1")
+				.k-image
+					img(src="http://lorempixel.com/1280/720/abstract/1" data-width="1280" data-height="720")
+
+			.k-block(data-thumbnail="http://lorempixel.com/128/72/abstract/2")
+				.k-image
+					img(src="http://lorempixel.com/1280/720/abstract/2" data-width="1280" data-height="720")
+
+			.k-block(data-thumbnail="http://lorempixel.com/128/72/abstract/3")
+				.k-image
+					img(src="http://lorempixel.com/1280/720/abstract/3" data-width="1280" data-height="720")
+		
+		.separator.bonus-separator
+		.wrapper.bonus-wrapper
+			.description.clearfix
+				span Navigation / Next & Previous Button
+				.separator
+				span #[b code]
+				.clear
+				.code
+					code='<div id="#fullpage-demo-navigator">'
+					br
+					code='	<div id="#fullpage-demo-prev" class="demo-nav-button put-left">'
+					br
+					code= '		<span class="icon-left"></span>'
+					br
+					code= '	</div>'
+					br
+					code='	<div class="k-nav-content"></div>'
+					br
+					code='	<div id="#fullpage-demo-next" class="demo-nav-button put-right">'
+					br
+					code= '		<span class="icon-right"></span>'
+					br
+					code= '	</div>'
+					br
+					code= '</div>'
+
+				.separator.clear
+
+				#fullpage-demo-navigator
+					#fullpage-demo-prev.demo-nav-button.put-left
+						span.icon-left
+
+					.k-nav-content
+
+					#fullpage-demo-next.demo-nav-button.put-right
+						span.icon-right
+        
+
+		.separator
+		.separator
+
+		//- config
+		.wrapper
+			.sub-title.clearfix
+				span Config
+			
+			.description.clearfix
+				span
+					b data-full:
+					br
+				span on/off page based navigation.
+				.code
+					code.
+						data-full: "1" | "0"
+				.separator
+
+				span
+					b data-fixed:
+					br
+				span if you use data-fixed-width/data-fixed-height options, you must set it to "1".
+				.code
+					code.
+						data-fixed: "1" | "0"
+				.separator
+
+				span
+					b data-fixed-width:
+					br
+				span use it when you need to set dimension in full mode.
+				br
+				span "full" get window width, parent get parent width and you can give specific number like "500"
+				.code
+					code.
+						data-fixed-width: "full" | "parent" | "int"
+				.separator
+
+				span
+					b data-fixed-height:
+					br
+				span use it when you need to set dimension in full mode.
+				br
+				span "full" get window height, parent get parent height and you can give specific number like "500"
+				.code
+					code.
+						data-fixed-height: "full" | "parent" | "int"
+				.separator
+
+				span
+					b data-duration:
+					br
+				span if you set, slider moves next block or page every x second
+				br
+				i optional
+				.code
+					code.
+						data-duration: "int" / in millisecond
+				.separator
+
+				span
+					b data-loop:
+					br
+				span if you set "1", slider goes back to first block or page after the last block or page.
+				br
+				i optional  
+				.code
+					code.
+						data-loop: "1" | "0"
+				.separator
+
+				span
+					b data-liquid:
+					br
+				span if you want to use liquid effect set it to "1".
+				.code
+					code.
+						data-liquid: "1" | "0"
+				.separator
+
+				span
+					b data-navigator:
+					br
+				span #id of the navigation container
+				.code
+					code.
+						data-navigator: "#id"
+				.separator
+
+				span
+					b data-navigatortype:
+					br
+				span #id of the navigation container. If you want to use thumbnail,you must add url to .k-block as "data-thumbnail" and give width and height to .k-image > img as "data-width" and "data-height"
+				.code
+					code.
+						data-navigatortype: "bullet" | "number" | "thumbnail"
+				.separator
+
+				span
+					b data-next:
+					br
+				span #id of the navigation next button
+				.code
+					code.
+						data-next: "#id"
+				.separator
+
+				span
+					b data-prev:
+					br
+				span #id of the navigation previous button
+				.code
+					code.
+						data-next: "#id"
+				.separator
+			
+			.separator
+
+			.description.clearfix
+				span Made by 
+				a(href="http://doub.co" target="blank") Doub.co
+				span  with love.
+
+		.separator
+		.separator
+
+	script.
+		$(".kay").each(function(){
+			$(this).kay({
+				end:function(){
+					console.log($(this).attr("id")+" ended");
+				},
+				start:function(){
+					console.log($(this).attr("id")+" started")
+				},
+				loading:"Loading..."
+			});
+		});

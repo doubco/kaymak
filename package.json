@@ -1,0 +1,15 @@
+{
+  "name": "kay",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-coffee": "~0.10.1",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jade": "~0.11.0",
+    "grunt-contrib-stylus": "^0.17.0",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-webfont": "^0.4.8"
+  }
+}
