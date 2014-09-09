@@ -1,18 +1,20 @@
 {
-  "name": "Kay",
+  "name": "kaymak.js",
   "version": "0.1",
   "authors": [
     "Berkay Sargın <thisis@berkaey.com>"
   ],
-  "description": "Multi-device slider",
+  "description": "Kaymak.js is a lightweight, flexible and multi-device content/image slider.",
   "main": "kay.js",
   "keywords": [
     "slider",
     "hammer",
-    "jquery"
+    "jquery",
+    "mobile",
+    "flexible"
   ],
   "license": "MIT",
-  "homepage": "doub.co/en/kay",
+  "homepage": "http://doubco.github.io/kaymak",
   "dependencies": {
     "jquery.transit": "~0.9.12",
     "jquery-hammerjs": "~1.1.3",
